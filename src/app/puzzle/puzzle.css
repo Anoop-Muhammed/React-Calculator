@@ -1,0 +1,99 @@
+body {
+    background-color: black;
+  }
+  
+  .puzzleContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
+    gap: 5px;
+    justify-content: center;
+  }
+  
+  .tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #ffff;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .puzzleHeading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #00f260, #0575e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 40px;
+  }
+  
+  
+  .empty {
+    background-color: transparent;
+    cursor: default;
+  }
+  
+  .buttonsContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .solvedMessage {
+    font-size: 20px;
+    color: #ffff;
+    position: absolute;
+    top: -30px; /* Adjusts the position above the buttons */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .solvedMessage.visible {
+    opacity: 1; /* Shows the message when the puzzle is solved */
+    margin-top: 40px;
+    margin-left: 19rem;
+    width: 150px;
+  }
+  
+  .solvedMessage.hidden {
+    opacity: 0; /* Keeps the message hidden when not solved */
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15rem;
+  }
+  
+  .resetButton, .solveButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #ffff;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+  }
+  
+  .solveButton {
+    visibility: hidden;
+    /* opacity: 1; */
+  }
+  
+  .resetButton:hover, .solveButton:hover {
+    background-color: #444;
+  }
+  
